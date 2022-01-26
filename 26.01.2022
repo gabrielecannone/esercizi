@@ -56,6 +56,7 @@ public class Main
 
 
 
+
 public class punto 
 {
 	private int x;
@@ -64,6 +65,10 @@ public class punto
 	{
 		x=0;
 		y=0;
+	}
+	public punto(punto p1, punto p2) 
+	{
+	  System.out.println(Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY()))); 
 	}
 	public int getX()
 	{
@@ -85,10 +90,7 @@ public class punto
 		y=y+dY;
 	}
 	
-	public double distanza(punto p1, punto p2) 
-	{
-		return Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY()));
-	}
+	
 	
 	public String toString(int x, int y) 
 	{
