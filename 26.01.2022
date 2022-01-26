@@ -1,3 +1,5 @@
+//Main.java
+
 import java.io.*;
 public class Main 
 {
@@ -32,4 +34,67 @@ public class Main
 		}
 	}
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//punto.java
+
+
+
+public class punto 
+{
+	private int x;
+	private int y;
+	public punto() 
+	{
+		x=0;
+		y=0;
+	}
+	public int getX()
+	{
+		return x;
+	}
+	public int getY()
+	{
+		return y;
+	}
+	public void setPunto(int xV, int yV) 
+	{
+		x=xV;
+		y=yV;
+	}
+	
+	public void traslaPunto(int dX, int dY) 
+	{
+		x=x+dX;
+		y=y+dY;
+	}
+	
+	public double distanza(punto p1, punto p2) 
+	{
+		return Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY()));
+	}
+	
+	public String toString(int x, int y) 
+	{
+		String coord;
+		coord=String.valueOf(x)+' '+String.valueOf(y); 
+		return coord;
+	}
+	
 }
