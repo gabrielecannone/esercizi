@@ -1,0 +1,35 @@
+import java.io.*;
+public class Main 
+{
+	
+
+
+	public static void main(String[] args) 
+	{
+		punto A,B;
+		A = new punto();
+		B = new punto();
+		prendi_punti(A, B);
+		
+		
+
+	}
+	public static void prendi_punti(punto A, punto B) 
+	{
+		InputStreamReader input = new InputStreamReader(System.in);
+		BufferedReader tastiera= new BufferedReader (input);
+		System.out.println("Inserire valori dei punti A e B");
+		try 
+		{
+			System.out.println("Punto A");
+			A.setPunto(Integer.valueOf(tastiera.readLine()), Integer.valueOf(tastiera.readLine()));
+			System.out.println("Punto B");
+			B.setPunto(Integer.valueOf(tastiera.readLine()), Integer.valueOf(tastiera.readLine()));
+		}
+		catch(Exception e) 
+		{
+			System.out.print("Errore input");
+		}
+	}
+
+}
