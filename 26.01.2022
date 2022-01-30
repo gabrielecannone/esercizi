@@ -1,65 +1,45 @@
 package esercizi;
 
-import java.io.*;
-public class Main 
+public class punto 
 {
-	
-
-
-	public static void main(String[] args) 
+	private int x;
+	private int y;
+	public punto() 
 	{
-		punto A,B;
-		A = new punto();
-		B = new punto();
-		prendi_punto(A, 'A');
-		trasla_punto(A);
-		prendi_punto(B, 'B');
-		System.out.println("La distanza tra i punti A e B è di "+ A.dist_punto(A, B));
-		
-		
-		
-		
-		
-
+		x=0;
+		y=0;
 	}
-	public static void prendi_punto(punto p, char nome) 
+	public double dist_punto(punto p1, punto p2) 
 	{
-		InputStreamReader input = new InputStreamReader(System.in);
-		BufferedReader tastiera= new BufferedReader (input);
-		System.out.println("Inserire valori del punto "+nome);
-		try 
-		{
-			System.out.println("Valore x e y separati dal tasto invio");
-			p.setPunto(Integer.valueOf(tastiera.readLine()), Integer.valueOf(tastiera.readLine()));
-		}
-		catch(Exception e) 
-		{
-			System.out.print("Errore input");
-		}
+	  return Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY())); 
+	}
+	public int getX()
+	{
+		return x;
+	}
+	public int getY()
+	{
+		return y;
+	}
+	public void setPunto(int xV, int yV) 
+	{
+		x=xV;
+		y=yV;
 	}
 	
-	public static void trasla_punto(punto p) 
+	public void traslaPunto(int dX, int dY) 
 	{
-		InputStreamReader input = new InputStreamReader(System.in);
-		BufferedReader tastiera= new BufferedReader (input);
-		System.out.println("Inserire valori traslati");
-		try 
-		{
-			System.out.println("Valore x e y di traslazione separati dal tasto invio");
-			p.traslaPunto(Integer.valueOf(tastiera.readLine()), Integer.valueOf(tastiera.readLine()));
-		}
-		catch(Exception e) 
-		{
-			System.out.print("Errore input");
-		}
-		
-		System.out.println("I nuovi valori di x e y sono "+p.getX()+" "+p.getY());
+		x=x+dX;
+		y=y+dY;
 	}
-
+	
+	
+	
+	public String toString(int x, int y) 
+	{
+		String coord;
+		coord=String.valueOf(x)+' '+String.valueOf(y); 
+		return coord;
+	}
+	
 }
-
-
-
-
-
-
