@@ -6,13 +6,13 @@ public class Main
 
 	public static void main(String[] args) 
 	{
-		punto A,B;
-		A = new punto();
-		B = new punto();
-		prendi_punto(A, 'A');
-		trasla_punto(A);
-		prendi_punto(B, 'B');
-		System.out.println("La distanza tra i punti A e B è di "+ A.dist_punto(A, B));
+		punto P0,P1;
+		P0 = new punto();
+		P1 = new punto();
+		prendi_punto(P0, 'A');
+		trasla_punto(P0);
+		prendi_punto(P1, 'B');
+		System.out.println("La distanza tra i punti A e B è di "+ P0.dist_punto(P1));
 		
 		
 		
