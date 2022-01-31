@@ -37,9 +37,9 @@ public class punto
 		y=y+dY;
 	}
 	
-	public double dist_punto(punto p1, punto p2) 
+	public double dist_punto(punto p) 
 	{
-	  return Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY())); 
+	  return Math.sqrt((p.getX()-x)*(p.getX()-x)+(p.getY()-y)*(p.getY()-y)); 
 	}
 	
 	/*public String toString(int x, int y) 
