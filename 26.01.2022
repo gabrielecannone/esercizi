@@ -1,5 +1,3 @@
-package esercizi;
-
 public class punto 
 {
 	private int x;
@@ -9,10 +7,12 @@ public class punto
 		x=0;
 		y=0;
 	}
-	public double dist_punto(punto p1, punto p2) 
+	public punto(int xV, int yV) 
 	{
-	  return Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY())); 
+		x=xV;
+		y=yV;
 	}
+	
 	public int getX()
 	{
 		return x;
@@ -21,11 +21,15 @@ public class punto
 	{
 		return y;
 	}
-	public void setPunto(int xV, int yV) 
+	public void setX(int xV)
 	{
 		x=xV;
+	}
+	public void setY(int yV)
+	{
 		y=yV;
 	}
+	
 	
 	public void traslaPunto(int dX, int dY) 
 	{
@@ -33,13 +37,16 @@ public class punto
 		y=y+dY;
 	}
 	
+	public double dist_punto(punto p1, punto p2) 
+	{
+	  return Math.sqrt((p2.getX()-p1.getX())*(p2.getX()-p1.getX())+(p2.getY()-p1.getY())*(p2.getY()-p1.getY())); 
+	}
 	
-	
-	public String toString(int x, int y) 
+	/*public String toString(int x, int y) 
 	{
 		String coord;
 		coord=String.valueOf(x)+' '+String.valueOf(y); 
 		return coord;
-	}
+	}*/
 	
 }
